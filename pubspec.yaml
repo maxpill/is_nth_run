@@ -1,0 +1,15 @@
+name: is_nth_run
+description: A package to check if it is the n-th time the app runs.
+version: 1.0.0
+repository: https://github.com/maxpill/is_nth_run
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.0.8
+
+flutter:

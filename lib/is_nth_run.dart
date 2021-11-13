@@ -20,14 +20,9 @@ class IsNthRun {
     } catch (e) {
       throw e;
     }
-
-    if (numberOfRuns != 0) {
-      await prefs.setInt(_nthRunKey, numberOfRuns++);
-      return numberOfRuns == number;
-    } else {
-      await prefs.setInt(_nthRunKey, numberOfRuns++);
-      return numberOfRuns == number;
-    }
+    
+    await prefs.setInt(_nthRunKey, numberOfRuns++);
+    return numberOfRuns == number;
   }
 
   /// Returns true if this on n-th time you call this method
@@ -47,14 +42,9 @@ class IsNthRun {
     } catch (e) {
       throw e;
     }
-
-    if (numberOfRuns != 0) {
-      await prefs.setInt(_nthRunKey, numberOfRuns++);
-      return numberOfRuns % number == 0;
-    } else {
-      await prefs.setInt(_nthRunKey, numberOfRuns++);
-      return numberOfRuns % number == 0;
-    }
+    
+    await prefs.setInt(_nthRunKey, numberOfRuns++);
+    return numberOfRuns % number == 0;
   }
 
   static Future<void> reset() async {

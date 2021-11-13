@@ -24,6 +24,7 @@ To check if this is the every n-th time the app is run call:
 
 ```dart
 bool nthRun = await IsNthRun.isEveryNthRun(5);
+```
 
 To reset the counter call:
 

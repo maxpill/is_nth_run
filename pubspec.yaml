@@ -1,6 +1,6 @@
 name: is_nth_run
-description: A package to check if it is the n-th time the app runs.
-version: 1.0.0
+description: A small package to check if it is the n-th or every n-thtime the app runs.
+version: 1.0.1
 repository: https://github.com/maxpill/is_nth_run
 
 environment:

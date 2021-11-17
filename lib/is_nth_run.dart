@@ -21,7 +21,7 @@ class IsNthRun {
       throw e;
     }
 
-    await prefs.setInt(_nthRunKey, numberOfRuns + 1);
+    await prefs.setInt(_nthRunKey, numberOfRuns! + 1);
 
     return numberOfRuns == number;
   }
@@ -44,8 +44,8 @@ class IsNthRun {
       throw e;
     }
 
-    await prefs.setInt(_nthRunKey, numberOfRuns + 1);
-    return numberOfRuns % number == 0;
+    await prefs.setInt(_nthRunKey, numberOfRuns! + 1);
+    return numberOfRuns! % number == 0;
   }
 
   static Future<void> reset() async {

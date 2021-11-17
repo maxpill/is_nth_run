@@ -4,7 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class IsNthRun {
   static const _nthRunKey = 'is_nth_run';
-  static int numberOfRuns = 0;
+  static int? numberOfRuns;
 
   /// Returns true if this is the n-th time you call this method
   /// since installing the app, otherwise false.
@@ -20,8 +20,9 @@ class IsNthRun {
     } catch (e) {
       throw e;
     }
-    
-    await prefs.setInt(_nthRunKey, numberOfRuns++);
+
+    await prefs.setInt(_nthRunKey, numberOfRuns + 1);
+
     return numberOfRuns == number;
   }
 
@@ -42,8 +43,8 @@ class IsNthRun {
     } catch (e) {
       throw e;
     }
-    
-    await prefs.setInt(_nthRunKey, numberOfRuns++);
+
+    await prefs.setInt(_nthRunKey, numberOfRuns + 1);
     return numberOfRuns % number == 0;
   }
 

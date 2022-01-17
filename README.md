@@ -16,11 +16,15 @@ import 'package:is_nth_run/is_nth_run.dart';
 
 To check if this is the n-th time the app is run call:
 
+Will return true only on 3rd run.
+
 ```dart
 bool nthRun = await IsNthRun.isNthRun(3);
 ```
 
 To check if this is the every n-th time the app is run call:
+
+Will return true on 5th, 15th, 20th, 25th etc. run.
 
 ```dart
 bool nthRun = await IsNthRun.isEveryNthRun(5);
